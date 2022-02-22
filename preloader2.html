@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.loader,
+		.loader:before, 
+		.loader:after{
+			border-style: solid;
+			border-width: 40px 30px 0;
+			border-color: transparent;
+			transform-origin: bottom center;
+			animation: rotate linear infinite;
+		}
+		.loader{
+			width: 0;
+			height: 0;
+			margin: 50px auto 0;
+			border-top-color: #f47e60;
+			position: relative;
+			animation-duration: 1s;
+		}
+		.loader:before, 
+		.loader:after{
+			content: '';
+			position: absolute;
+			top: -40px;
+			left: -30px;
+		}
+		.loader:after{
+			border-top-color: #f8b26a;
+			animation-duration: 2s;
+		}
+		.loader:before{
+			border-top-color: #abbd81;
+			animation-duration: 3s;
+		}   
+		@keyframes rotate{
+			0%{ transform: rotate(0deg); }
+			100%{ transform: rotate(360deg); }
+		}
+	</style>
+	<div class="loader"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.loader{
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			border-radius: 50%;
+			border: 20px solid transparent;
+			border-bottom-color: #483f90;
+			border-right-color: #483f90;
+			transform: rotate(45deg);
+			position: relative;
+			animation: animate 3.5s ease-in-out infinite;
+		}
+		.loader .ball{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			animation: animateball 3.5s ease-in-out infinite;
+		}
+		.loader .ball:before{
+			content: '';
+			background: #d11f63;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+			bottom: 50%;
+			right: 15px;
+		}
+		@keyframes animate{
+			0%{ transform: rotate(0deg); }
+			50%{ transform: rotate(90deg); }
+			100%{ transform: rotate(0deg); }
+		}
+		@keyframes animateball{
+			0%{ transform: rotate(0deg); }
+			50%{ transform: rotate(180deg); }
+			100%{ transform: rotate(0deg); }
+		}
+	</style>
+	<div class="loader">
+		<div class="ball"></div>
+	</div>
+</body>
+</html>
